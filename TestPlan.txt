@@ -1,0 +1,27 @@
+
+There are two main Search API's :
+
+ - Search API with different query params
+   
+    Test case1 (@singleQueryParam in the feature file):
+    1. Invoke the API "https://itunes.apple.com/search?term=jack+johnson."
+    2. Validate the results count as 50
+
+    Test case2:
+    1. Invoke the API "https://itunes.apple.com/search?term=jack+johnson&limit=25."
+    2. Validate the results count 
+
+    Test case3:
+    1. Invoke the API "https://itunes.apple.com/searchterm=jack+johnson&entity=musicVideo."
+    2. Validate the results count 
+
+    Test case4:
+    1. Invoke the API "https://itunes.apple.com/search?term=jim+jones&country=ca"
+    2. Validate the results count 
+
+    Test case5:
+    1. Invoke the API "https://itunes.apple.com/search?term=yelp&country=us&entity=software"
+    2. Validate the results count 
+
+
+ - Lookup API with different parameters

@@ -24,6 +24,15 @@ public class SearchStepDef {
 					.get("https://itunes.apple.com/search");
 
 	}
+	
+	@Given("Search the lookup with single or multiple parameter")
+	public void lookupApiWithMultipleParams(DataTable queryParams) {
+		Map<String, String> params = queryParams.asMap();
+		response = given()
+					.queryParams(params)
+					.get("https://itunes.apple.com/lookup");
+
+	}
 
 	@Then("validate the values {string} {string}")
 	public void validate_the_values(String jsonPath, String value) {
@@ -34,20 +43,6 @@ public class SearchStepDef {
 		.log().all();
 	}
 
-	@Given("Search the iTunes with multiple parameters {string} {string} {string} {string}")
-	public void searchForTerms(String queryParam1, String queryParamVal1, String queryParam2, String queryParamVal2) {
-		if (NumberUtils.isDigits(queryParamVal2)) {
-			response = given()
-					.queryParam(queryParam1, queryParamVal1)
-					.queryParam(queryParam2, Integer.parseInt(queryParamVal2))
-					.get("https://itunes.apple.com/search");
-		} else {
-			response = given()
-					.queryParam(queryParam1, queryParamVal1)
-					.queryParam(queryParam2, queryParamVal2)
-					.get("https://itunes.apple.com/search");
-		}
-
-	}
+	
 
 }
