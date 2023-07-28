@@ -25,3 +25,32 @@ There are two main Search API's :
 
 
  - Lookup API with different parameters
+ 
+   Test case1:
+    1. Invoke the API "https://itunes.apple.com/lookup?id=909253"
+    2. Validate the results count as 50
+
+    Test case2:
+    1. Invoke the API "https://itunes.apple.com/lookup?id=284910350	"
+    2. Validate the results count 
+
+    Test case3:
+    1. Invoke the API "https://itunes.apple.com/lookup?amgArtistId=468749"
+    2. Validate the results count 
+
+    Test case4:
+    1. Invoke the API "https://itunes.apple.com/lookup?amgArtistId=468749,5723"
+    2. Validate the results count 
+
+    Test case5:
+    1. Invoke the API "https://itunes.apple.com/lookup?id=909253&entity=album"
+    2. Validate the results count 
+    
+     Test case6:
+    1. Invoke the API "https://itunes.apple.com/lookup?amgArtistId=468749,5723&entity=album&limit=5"
+    2. Validate the results count 
+    
+     Test case7:
+    1. Invoke the API "https://itunes.apple.com/lookup?amgArtistId=468749,5723&entity=song&limit=5&sort=recent"
+    2. Validate the results count 
+    
