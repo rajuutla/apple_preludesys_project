@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Search API Suite">
+  <test name="Search ITunes">
+    <classes>
+      <class name="com.preludesys.Runner.TestRunner"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
